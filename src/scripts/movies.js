@@ -5,6 +5,7 @@ var movies = [
     year: "1954",
     description: "",
     director: "Federico Fellini",
+    image: "lastrada1.jpg",
   },
   {
     id: "002",
@@ -12,6 +13,7 @@ var movies = [
     year: "1982",
     description: "",
     director: "Ridley Scott",
+    image: "bladerunner1.jpg",
   },
   {
     id: "003",
@@ -19,6 +21,7 @@ var movies = [
     year: "1976",
     description: "",
     director: "Werner Herzog",
+    image: "herz1.jpg",
   },
   {
     id: "004",
@@ -26,6 +29,7 @@ var movies = [
     year: "1975",
     description: "",
     director: "Stanley Kubrick",
+    image: "barrylyndon1.jpg",
   },
   {
     id: "005",
@@ -33,6 +37,7 @@ var movies = [
     year: "2008",
     description: "",
     director: "Sion Sono",
+    image: "loveexposure1.jpg",
   },
   {
     id: "006",
@@ -40,6 +45,7 @@ var movies = [
     year: "1983",
     description: "",
     director: "David Cronenberg",
+    image: "video1.jpg",
   },
   {
     id: "007",
@@ -47,6 +53,7 @@ var movies = [
     year: "1997",
     description: "",
     director: "Wong Kar-wai",
+    image: "happy1.jpg",
   },
   {
     id: "008",
@@ -54,5 +61,6 @@ var movies = [
     year: "1984",
     description: "",
     director: "WD Richter",
+    image: "buckaroo1.jpg",
   },
 ];

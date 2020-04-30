@@ -1,0 +1,14 @@
+#movieList {
+  max-width: 250px;
+  margin: 1rem;
+  li {
+    border-top: 1px solid black;
+    padding: 0.5rem 0;
+  }
+  li:last-child {
+    border-bottom: 1px solid black;
+  }
+  li:hover {
+    cursor: pointer;
+  }
+}
