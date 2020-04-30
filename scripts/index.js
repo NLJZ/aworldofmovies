@@ -37,4 +37,11 @@ let movieListItems = document.querySelectorAll(".movie");
 console.log(movieListItems);
 movieListItems.forEach(function (movieItem) {
   movieItem.addEventListener("click", displayInfo);
+  // movieItem.addEventListener("click", addActiveColor);
+  movieItem.addEventListener("mouseover", function () {
+    movieItem.style.backgroundColor = "#ccc";
+  });
+  movieItem.addEventListener("mouseleave", function () {
+    movieItem.style.backgroundColor = "#fff";
+  });
 });
