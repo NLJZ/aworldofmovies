@@ -1,0 +1,16 @@
+#movieList {
+  max-width: 250px;
+  margin: 1rem;
+}
+#movieList li {
+  border-top: 1px solid black;
+  padding: 0.5rem 0;
+}
+#movieList li:last-child {
+  border-bottom: 1px solid black;
+}
+#movieList li:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=menu.css.map */
