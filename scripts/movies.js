@@ -1,0 +1,58 @@
+var movies = [
+  {
+    id: "001",
+    title: "La Strada",
+    year: "1954",
+    description: "",
+    director: "Federico Fellini",
+  },
+  {
+    id: "002",
+    title: "Blade Runner",
+    year: "1982",
+    description: "",
+    director: "Ridley Scott",
+  },
+  {
+    id: "003",
+    title: "Herz aus Glas",
+    year: "1976",
+    description: "",
+    director: "Werner Herzog",
+  },
+  {
+    id: "004",
+    title: "Barry Lyndon",
+    year: "1975",
+    description: "",
+    director: "Stanley Kubrick",
+  },
+  {
+    id: "005",
+    title: "Love Exposure",
+    year: "2008",
+    description: "",
+    director: "Sion Sono",
+  },
+  {
+    id: "006",
+    title: "Videodrome",
+    year: "1983",
+    description: "",
+    director: "David Cronenberg",
+  },
+  {
+    id: "007",
+    title: "Happy Together",
+    year: "1997",
+    description: "",
+    director: "Wong Kar-wai",
+  },
+  {
+    id: "008",
+    title: "The Adventures of Buckaroo Bonzai Across the 8th Dimension",
+    year: "1984",
+    description: "",
+    director: "WD Richter",
+  },
+];
