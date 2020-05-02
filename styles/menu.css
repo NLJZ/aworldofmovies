@@ -3,11 +3,11 @@
   margin: 1rem;
 }
 #movieList li {
-  border-top: 1px solid black;
+  border-top: 1px solid #111;
   padding: 0.5rem;
 }
 #movieList li:last-child {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #111;
 }
 #movieList li:hover {
   cursor: pointer;
