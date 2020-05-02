@@ -4,13 +4,19 @@
 }
 #movieList li {
   border-top: 1px solid black;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
 }
 #movieList li:last-child {
   border-bottom: 1px solid black;
 }
 #movieList li:hover {
   cursor: pointer;
+}
+#movieList .active {
+  background-color: #79bbdd;
+}
+#movieList .hover {
+  background-color: #ccc;
 }
 
 /*# sourceMappingURL=menu.css.map */
