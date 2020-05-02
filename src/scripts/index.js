@@ -32,16 +32,25 @@ function displayInfo() {
   movieDirectorItem.innerHTML = `Dir: ${director}`;
   movieImage.src = `./img/${image}`;
 }
-
 let movieListItems = document.querySelectorAll(".movie");
-console.log(movieListItems);
+function addActiveColor() {
+  movieListItems.forEach(function (movieItem) {
+    if (movieItem.classList.contains("active")) {
+      movieItem.classList.remove("active");
+    }
+  });
+  this.classList.remove("hover");
+  this.classList.add("active");
+}
+
 movieListItems.forEach(function (movieItem) {
   movieItem.addEventListener("click", displayInfo);
-  // movieItem.addEventListener("click", addActiveColor);
+  movieItem.addEventListener("click", addActiveColor);
   movieItem.addEventListener("mouseover", function () {
-    movieItem.style.backgroundColor = "#ccc";
+    if (movieItem.classList.contains("active") !== true)
+      movieItem.classList.add("hover");
   });
   movieItem.addEventListener("mouseleave", function () {
-    movieItem.style.backgroundColor = "#fff";
+    movieItem.classList.remove("hover");
   });
 });
