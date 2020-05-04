@@ -5,13 +5,10 @@ const movieList = document.getElementById("movieList");
 const movieInfo = document.getElementById("movieInfo");
 
 parsedData.forEach(function (movie) {
-  let newLi = document.createElement("li");
   let { id, title } = movie;
-  let text = document.createTextNode(`${title}`);
-  newLi.appendChild(text);
-  newLi.setAttribute("id", `${id}`);
-  newLi.setAttribute("class", "movie");
-  movieList.appendChild(newLi);
+  let newListItem = `
+  <li id="${id}" class="movie">${title}</li>`;
+  movieList.innerHTML += newListItem;
 });
 
 function displayInfo() {
