@@ -12,7 +12,6 @@ parsedData.forEach(function (movie) {
 });
 
 function displayInfo() {
-  console.log(this.id);
   let movie = parsedData.find((movie) => movie.id == this.id);
   let { title, year, director, image } = movie;
   movieInfo.innerHTML = `
