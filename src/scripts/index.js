@@ -15,7 +15,7 @@ function displayInfo() {
   let movie = parsedData.find((movie) => movie.id == this.id);
   let { title, year, director, image } = movie;
   movieInfo.innerHTML = `
-  <img id="movieImage" src="./img/${image}" />
+  <img id="movieImage" src="./img/${image}" alt=${title} />
   <ul>
     <li><h3>${title}</h3></li>
     <li>${year}</li>
