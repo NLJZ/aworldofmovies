@@ -31,13 +31,13 @@ h1 {
   padding: 1rem;
 }
 
-.movieInfo {
+#movieInfo {
   padding-top: 1rem;
   width: 100%;
   max-width: 1200px;
   height: 100%;
 }
-.movieInfo #movieImage {
+#movieInfo #movieImage {
   object-fit: contain;
   width: 100%;
   max-width: 1920px;

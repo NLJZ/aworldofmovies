@@ -1,4 +1,4 @@
-var movies = [
+const movies = [
   {
     id: "001",
     title: "La Strada",
@@ -64,3 +64,6 @@ var movies = [
     image: "buckaroo1.jpg",
   },
 ];
+
+let data = JSON.stringify(movies);
+export { data };
