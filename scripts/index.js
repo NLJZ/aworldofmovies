@@ -4,12 +4,42 @@ let parsedData = JSON.parse(data);
 const movieList = document.getElementById("movieList");
 const movieInfo = document.getElementById("movieInfo");
 
-parsedData.forEach(function (movie) {
-  let { id, title } = movie;
-  let newListItem = `
+const buildMovieList = () => {
+  parsedData.forEach(function (movie) {
+    let { id, title } = movie;
+    let newListItem = `
   <li id="${id}" class="movie">${title}</li>`;
-  movieList.innerHTML += newListItem;
-});
+    movieList.innerHTML += newListItem;
+  });
+};
+
+const alphaList = () => {
+  movieList.innerHTML = "";
+  parsedData.sort(function (a, b) {
+    var titleA = a.title,
+      titleB = b.title;
+    if (titleA < titleB) return -1;
+    if (titleA > titleB) return 1;
+    return 0;
+  });
+  buildMovieList();
+  addListeners();
+};
+
+let alphaSortButton = document.getElementById("alpha");
+alphaSortButton.addEventListener("click", alphaList);
+
+const yearList = () => {
+  movieList.innerHTML = "";
+  parsedData.sort(function (a, b) {
+    return a.year - b.year;
+  });
+  buildMovieList();
+  addListeners();
+};
+
+let yearSortButton = document.getElementById("year");
+yearSortButton.addEventListener("click", yearList);
 
 function displayInfo() {
   let movie = parsedData.find((movie) => movie.id == this.id);
@@ -24,25 +54,29 @@ function displayInfo() {
   `;
 }
 
-let movieListItems = document.querySelectorAll(".movie");
-function addActiveColor() {
-  movieListItems.forEach(function (movieItem) {
-    if (movieItem.classList.contains("active")) {
-      movieItem.classList.remove("active");
-    }
-  });
-  this.classList.remove("hover");
-  this.classList.add("active");
-}
+const addListeners = () => {
+  let movieListItems = document.querySelectorAll(".movie");
+  function addActiveColor() {
+    movieListItems.forEach(function (movieItem) {
+      if (movieItem.classList.contains("active")) {
+        movieItem.classList.remove("active");
+      }
+    });
+    this.classList.remove("hover");
+    this.classList.add("active");
+  }
 
-movieListItems.forEach(function (movieItem) {
-  movieItem.addEventListener("click", displayInfo);
-  movieItem.addEventListener("click", addActiveColor);
-  movieItem.addEventListener("mouseover", function () {
-    if (movieItem.classList.contains("active") !== true)
-      movieItem.classList.add("hover");
+  movieListItems.forEach(function (movieItem) {
+    movieItem.addEventListener("click", displayInfo);
+    movieItem.addEventListener("click", addActiveColor);
+    movieItem.addEventListener("mouseover", function () {
+      if (movieItem.classList.contains("active") !== true)
+        movieItem.classList.add("hover");
+    });
+    movieItem.addEventListener("mouseleave", function () {
+      movieItem.classList.remove("hover");
+    });
   });
-  movieItem.addEventListener("mouseleave", function () {
-    movieItem.classList.remove("hover");
-  });
-});
+};
+window.onload = alphaList();
+window.onload = addListeners();
