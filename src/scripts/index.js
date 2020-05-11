@@ -65,7 +65,6 @@ const addListeners = () => {
     this.classList.remove("hover");
     this.classList.add("active");
   }
-
   movieListItems.forEach(function (movieItem) {
     movieItem.addEventListener("click", displayInfo);
     movieItem.addEventListener("click", addActiveColor);
